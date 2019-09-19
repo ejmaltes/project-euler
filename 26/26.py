@@ -28,7 +28,7 @@ def findNumRepeat(denom):
         if remainder == 0:
             return 0
         elif remainder in remainders and div == decimals[len(remainders) - remainders[::-1].index(remainder) - 1]:
-            return len(remainders) - (len(remainders) - remainders[::-1].index(remainder) - 1)
+            return remainders[::-1].index(remainder) + 1
         else:
             remainders.append(remainder)
             decimals.append(div)
